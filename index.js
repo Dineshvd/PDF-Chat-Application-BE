@@ -6,7 +6,11 @@ const connectDB = require("./config/db");
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3001", "http://localhost:5173"]; // React dev ports
+const allowedOrigins = [
+  "http://localhost:3001",
+  "http://localhost:5173",
+  "https://siviai.netlify.app/",
+]; // React dev ports
 
 // 👇 Add CORS middleware
 app.use(

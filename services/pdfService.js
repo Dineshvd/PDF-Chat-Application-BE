@@ -94,6 +94,7 @@ const getEmbeddings = async (chunks) => {
     const response = await axios.post(process.env.EMBEDDING_API_URL, {
       texts: chunks,
     });
+    console.log("Embedding API response:", response.data);
     return response.data.embeddings; // Array of vectors
   } catch (error) {
     console.error("Embedding API rror:", error.message);
